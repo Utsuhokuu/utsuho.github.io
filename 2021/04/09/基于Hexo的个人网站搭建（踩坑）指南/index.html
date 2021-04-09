@@ -7,8 +7,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
-  <link rel="icon" href="/img/favicon.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/brow.png">
+  <link rel="icon" href="/img/brow.png">
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -52,6 +52,10 @@
 <link  rel="stylesheet" href="/css/main.css" />
 
 <!-- 自定义样式保持在最底部 -->
+
+  
+<link rel="stylesheet" href="/css/iconfont.css">
+
 
 
   <script id="fluid-configs">
@@ -158,7 +162,7 @@
 </nav>
 
     <div class="banner" id="banner" parallax=true
-         style="background: url('http://i2.tiimg.com/735805/c0aef68ef1974506.jpg') no-repeat center center;
+         style="background: url('http://i1.fuimg.com/735805/e313f6351b185f8f.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -185,19 +189,10 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      2.4k 字
+      2.9k 字
     </span>
   
 
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      28
-       分钟
-    </span>
   
 
   
@@ -241,22 +236,15 @@
 </ul>
 </blockquote>
 <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ul>
-<li><p>安装Git  </p>
-</li>
-<li><p>安装Node.js  </p>
-</li>
-<li><p>安装hexo  </p>
-</li>
-<li><p>使用GitHub创建个人仓库  </p>
-</li>
-<li><p>推送网站  </p>
-</li>
-<li><p>发布文章 </p>
-</li>
-<li><p>更换网站主题  </p>
-</li>
-<li><p>常见问题Q&amp;A</p>
-</li>
+<li>安装Git  </li>
+<li>安装Node.js  </li>
+<li>安装hexo  </li>
+<li>使用GitHub创建个人仓库  </li>
+<li>推送网站  </li>
+<li>发布文章 </li>
+<li>更换网站主题  </li>
+<li>常见问题Q&amp;A</li>
+<li>后记</li>
 </ul>
 <h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><p>Git是一个开源的分布式版本控制系统，可以有效、高速地进行项目版本管理。简单来说可以通过Git来将你的博客文章同步到Github。</p>
 <p>从Git官网下载安装 ( <a target="_blank" rel="noopener" href="https://git-scm.com/download/win">https://git-scm.com/download/win</a> ) ，之后可以通过<code>git --version</code> 来测试是否安装成功。安装成功后，右键点击Git Bash Here或者在菜单栏搜索Git Bash，将你的Git与GitHub账号进行绑定：</p>
@@ -381,16 +369,34 @@ git config --global user.email &quot;在此处输入你的GitHub注册邮箱&quo
 
 
 
+
+
 <p><strong>8.<code>hexo s</code> 与 <code>hexo d</code> 的区别是什么？</strong></p>
 <p>答：</p>
 <p><code>hexo s</code> 是启动服务器，将博客加载之本地服务器，可以通过localhost进行预览。</p>
 <p><code>hexo d</code> 是部署网站，将博客内容推送到GitHub个人网站仓库中。</p>
 <p>一般我们在编辑网站时，可以先执行<code>hexo s</code> 进行预览查看效果，确认无误之后再通过<code>hexo d</code> 部署网站。</p>
+<p><strong>9.<code>hexo g</code> 后出现”Template render error”错误如何解决？</strong></p>
+<p>答：</p>
+<p>出现这种错误一般来说是你的文章中引入了诸如大括号<code>&#123;&#125;</code> 之类的特殊字符。请仔细检查文章中是否存在特殊字符，有的话建议通过Markdown中的代码区块包裹起来（或者用其他方法对特殊字符进行转义）。</p>
+<p><strong>10.<code>hexo s</code> 后出现”TypeError: Cannot read property ‘utcOffset’ of null”错误如何解决？</strong></p>
+<p>答：</p>
+<p>将站点配置文件中开头的<code>timezone</code> 项修改为<code>Asia/Shanghai</code> 即可。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>到这里为止，个人网站的搭建工作就基本告一段落了，但是其实我们距离一个精美的网站还差很远。如果说这篇文章的内容是购置了一套新房子的话，那么个性化配置和文章写作可以说是房子的内在装修过程了。不过万事开头难，最重要的是先把网站搭建起来，先玩起来再说，至于怎么把博客做得精致，做得专业的问题慢慢再考虑也不迟，毕竟写博客是日积月累的过程，不太可能一口吃成胖子。</p>
+<p>不过说实话，虽然网站的搭建从步骤看貌似非常简单，但是实际操作的过程其实还是需要耗费不少精力的。我在折腾的过程中都曾一度想过放弃（主要是坑踩太多了QAQ），去使用CSDN啊简书啊等现成的博客网站。不过想了一下，拥有自己的网站实在是太cool了，所以就一直坚持了下来，于是便克服了众多困难，也获得了相应的成就感。我觉得，这种经历是弥足珍贵的。</p>
+<p>其实这篇文章还有很多我想补充的地方，不过由于时间关系，更多的内容日后再填补啦~</p>
 
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/">技术分享</a>
+                    
+                  </div>
                 
                 
                   <div class="post-meta">
@@ -422,6 +428,38 @@ git config --global user.email &quot;在此处输入你的GitHub注册邮箱&quo
               
             </div>
 
+            
+              <!-- Comments -->
+              <article class="comments" id="comments" lazyload>
+                
+                  
+                
+                
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', function () {
+        new Valine({
+          el: "#valine",
+          app_id: "hikB0P4EWwTpF5RVC3GELv9D-gzGzoHsz",
+          app_key: "9rtGmgEpUltWAwSEo4Ow9HxO",
+          placeholder: "发一条友善的评论",
+          path: window.location.pathname,
+          avatar: "retro",
+          meta: ["nick","mail","link"],
+          pageSize: "10",
+          lang: "zh-CN",
+          highlight: false,
+          recordIP: false,
+          serverURLs: "http://fowdef.top",
+        });
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+              </article>
             
           </article>
         </div>
@@ -479,7 +517,7 @@ git config --global user.email &quot;在此处输入你的GitHub注册邮箱&quo
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
-     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    
   </div>
   
 
@@ -584,5 +622,5 @@ git config --global user.email &quot;在此处输入你的GitHub注册邮箱&quo
 <script  src="/js/boot.js" ></script>
 
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 </html>
